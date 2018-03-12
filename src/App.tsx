@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import MenuAppBar from './components/MenuAppBar';
-import HelloWorld from './components/helloWorld';
+import Home from './components/Home';
 import Login from './components/Login';
 
 // const logo = require('./logo.svg');
@@ -25,7 +25,7 @@ class App extends React.Component {
       <Router>
         <>
           <MenuAppBar />
-          <Route exact={true} path="/" component={HelloWorld} />
+          <Route exact={true} path="/" component={Home} />
           {/* <Route path="/register" component={Register} /> */}
           <Route path="/login" component={Login} />
         </>

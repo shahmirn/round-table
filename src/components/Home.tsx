@@ -1,12 +1,10 @@
 import * as React from 'react';
-import { Button } from 'material-ui';
+import './Home.css';
 
 class HelloWorld extends React.Component {
     render() {
         return (
-            <Button variant="raised" color="primary">
-                Primary
-            </Button>
+            <div className="hero" />
         );
     }
 }

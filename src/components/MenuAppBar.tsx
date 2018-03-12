@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import {
-    FormGroup,
-    FormControlLabel,
-    Switch,
+    // FormGroup,
+    // FormControlLabel,
+    // Switch,
     AppBar,
     Toolbar,
     IconButton,
@@ -33,7 +33,7 @@ const styles = {
 
 class MenuAppBar extends React.Component<WithStyles<keyof typeof styles>> {
     state = {
-      auth: true,
+      auth: false,
       anchorEl: undefined,
     };
   
@@ -56,13 +56,13 @@ class MenuAppBar extends React.Component<WithStyles<keyof typeof styles>> {
   
       return (
         <div className={classes.root}>
-          <FormGroup>
+          {/* <FormGroup>
             <FormControlLabel
               control={
                 <Switch checked={auth} onChange={this.handleChange} aria-label="LoginSwitch" />}
               label={auth ? 'Logout' : 'Login'}
             />
-          </FormGroup>
+          </FormGroup> */}
           <AppBar position="static">
             <Toolbar>
               <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
