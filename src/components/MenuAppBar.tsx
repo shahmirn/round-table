@@ -101,9 +101,11 @@ class MenuAppBar extends React.Component<WithStyles<keyof typeof styles>> {
                 </div>
               )}
               {!auth && (
-                  <Button color="inherit" className="loginButton">
-                    <Link to="/login">Login</Link>
+                <Link to="/login" className="login">
+                  <Button color="inherit">
+                    Login
                   </Button>
+                </Link>
               )}
             </Toolbar>
           </AppBar>
