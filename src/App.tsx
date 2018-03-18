@@ -1,11 +1,23 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 
 import './App.css';
 
 import MenuAppBar from './components/MenuAppBar';
 import Home from './components/Home';
 import Login from './components/Login';
+import { blueGrey } from 'material-ui/colors';
+import Register from './components/Register';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: blueGrey
+  },
+  typography: {
+    fontFamily: 'Lato'
+  }
+});
 
 // const logo = require('./logo.svg');
 
@@ -21,16 +33,16 @@ class App extends React.Component {
       //     To get started, edit <code>src/App.tsx</code> and save to reload.
       //   </p>
       // </div>
-      <>
-      <Router>
-        <>
-          <MenuAppBar />
-          <Route exact={true} path="/" component={Home} />
-          {/* <Route path="/register" component={Register} /> */}
-          <Route path="/login" component={Login} />
-        </>
-      </Router>
-      </>
+      <MuiThemeProvider theme={theme}>
+        <Router>
+          <>
+            <MenuAppBar />
+            <Route exact={true} path="/" component={Home} />
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+          </>
+        </Router>
+      </MuiThemeProvider>
     );
   }
 }
