@@ -14,11 +14,10 @@ import {
     WithStyles,
     Button
 } from 'material-ui';
+import { StyleRules } from 'material-ui/styles';
 import { Menu as MenuIcon, AccountCircle } from 'material-ui-icons';
 
-import './MenuAppBar.css';
-
-const styles = {
+const styles: StyleRules = {
     root: {
       flexGrow: 1,
     },
@@ -28,6 +27,10 @@ const styles = {
     menuButton: {
       marginLeft: -12,
       marginRight: 20,
+    },
+    plainLink: {
+      color: 'inherit',
+      textDecoration: 'none'
     }
 };
 
@@ -69,7 +72,7 @@ class MenuAppBar extends React.Component<WithStyles<keyof typeof styles>> {
                 <MenuIcon />
               </IconButton>
               <Typography variant="title" color="inherit" className={classes.flex}>
-                Round Table
+                <Link to="/" className={classes.plainLink}>Round Table</Link>
               </Typography>
               {auth && (
                 <div>
@@ -101,7 +104,7 @@ class MenuAppBar extends React.Component<WithStyles<keyof typeof styles>> {
                 </div>
               )}
               {!auth && (
-                <Link to="/login" className="login">
+                <Link to="/login" className={classes.plainLink}>
                   <Button color="inherit">
                     Login
                   </Button>

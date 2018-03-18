@@ -2,36 +2,41 @@
 import * as React from 'react';
 import { Card, withStyles, CardContent, WithStyles, TextField, CardHeader, Button, Theme } from 'material-ui';
 import { Link } from 'react-router-dom';
+import { StyleRules } from 'material-ui/styles';
 
-const styles = (theme: Theme) => ({
-    container: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: 'calc(100% - 64px)'
-    },
-    card: {
-        maxWidth: 345,
-    },
-    textField: {
-        width: '100%'
-    },
-    button: {
-        marginTop: theme.spacing.unit,
-        marginBottom: theme.spacing.unit,
-        width: '100%'
-    },
-    cardHeader: {
-        backgroundColor: theme.palette.primary.main,
-    },
-    cardHeaderTitle: {
-        color: theme.palette.primary.contrastText
-    },
-    signUpContainer: {
-        marginTop: theme.spacing.unit,
-        textAlign: 'center'
-    }
-});
+const styles = (theme: Theme) => {
+    const styleRules: StyleRules = {
+        container: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: 'calc(100% - 64px)'
+        },
+        card: {
+            maxWidth: 345,
+        },
+        textField: {
+            width: '100%'
+        },
+        button: {
+            marginTop: theme.spacing.unit,
+            marginBottom: theme.spacing.unit,
+            width: '100%'
+        },
+        cardHeader: {
+            backgroundColor: theme.palette.primary.main,
+        },
+        cardHeaderTitle: {
+            color: theme.palette.primary.contrastText
+        },
+        signUpContainer: {
+            marginTop: theme.spacing.unit,
+            textAlign: 'center'
+        }
+    };
+    
+    return styleRules;
+};
 
 class Login extends React.Component<WithStyles<any>> {
     state = {
