@@ -8,7 +8,7 @@ import MenuAppBar from './components/MenuAppBar';
 import Home from './components/Home';
 import Login from './components/Login';
 import { blueGrey } from 'material-ui/colors';
-import Register from './components/Register';
+import SignUp from './components/SignUp';
 
 const theme = createMuiTheme({
   palette: {
@@ -38,7 +38,7 @@ class App extends React.Component {
           <>
             <MenuAppBar />
             <Route exact={true} path="/" component={Home} />
-            <Route path="/register" component={Register} />
+            <Route path="/signup" component={SignUp} />
             <Route path="/login" component={Login} />
           </>
         </Router>

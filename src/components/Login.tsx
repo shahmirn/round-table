@@ -85,7 +85,7 @@ class Login extends React.Component<WithStyles<any>> {
                             </Button>
                         </form>
                         <div className={classes.signUpContainer}>
-                            Don't have an account? <Link to="/register">Sign up</Link>
+                            Don't have an account? <Link to="/signup">Sign up</Link>
                         </div>
                     </CardContent>
                 </Card>

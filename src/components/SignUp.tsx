@@ -33,10 +33,11 @@ const styles = (theme: Theme) => ({
     }
 });
 
-class Register extends React.Component<WithStyles<any>> {
+class SignUp extends React.Component<WithStyles<any>> {
     state = {
         firstName: '',
         lastName: '',
+        phone: '',
         email: '',
         password: ''
     };
@@ -53,7 +54,7 @@ class Register extends React.Component<WithStyles<any>> {
             <div className={classes.container}>
                 <Card className={classes.card}>
                     <CardHeader
-                        title="Register"
+                        title="Sign Up"
                         className={classes.cardHeader}
                         classes={{ title: classes.cardHeaderTitle }}
                     />
@@ -76,6 +77,15 @@ class Register extends React.Component<WithStyles<any>> {
                                 margin="normal"
                             />
                             <TextField
+                                id="phone"
+                                label="Phone Number"
+                                type="tel"
+                                className={classes.textField}
+                                value={this.state.phone}
+                                onChange={this.handleChange('phone')}
+                                margin="normal"
+                            />
+                            <TextField
                                 id="email"
                                 label="Email"
                                 type="email"
@@ -94,7 +104,7 @@ class Register extends React.Component<WithStyles<any>> {
                                 margin="normal"
                             />
                             <Button variant="raised" size="large" color="primary" className={classes.button}>
-                                Register
+                                Sign Up
                             </Button>
                         </form>
                         <div className={classes.signUpContainer}>
@@ -107,4 +117,4 @@ class Register extends React.Component<WithStyles<any>> {
     }
 }
 
-export default withStyles(styles as any)(Register);
+export default withStyles(styles as any)(SignUp);
